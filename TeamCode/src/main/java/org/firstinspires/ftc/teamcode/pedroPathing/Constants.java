@@ -16,13 +16,9 @@ import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 public class Constants {
     public static FollowerConstants followerConstants = new FollowerConstants()
-            .mass(4.27)
-            .forwardZeroPowerAcceleration(-31.28832856249314)
-            .lateralZeroPowerAcceleration(-38.75391169409838)
-            .translationalPIDFCoefficients(new PIDFCoefficients(0.07, 0, 0.006, 0.02))
-            .headingPIDFCoefficients(new PIDFCoefficients(1, 0, 0.05, 0.02))
-            .drivePIDFCoefficients(new FilteredPIDFCoefficients(0.01, 0.1, 0.001, 0.6, 0.000005))
-            .centripetalScaling(0.00075);
+            .mass(9.163)
+            .forwardZeroPowerAcceleration(-54.31193383190796)
+            .lateralZeroPowerAcceleration(-61.30189245445065);
 
     public static MecanumConstants driveConstants = new MecanumConstants()
             .maxPower(1)
@@ -34,17 +30,17 @@ public class Constants {
             .leftRearMotorDirection(DcMotorSimple.Direction.REVERSE)
             .rightFrontMotorDirection(DcMotorSimple.Direction.FORWARD)
             .rightRearMotorDirection(DcMotorSimple.Direction.FORWARD)
-            .xVelocity(67.81135378860114)
-            .yVelocity(60.885771984190455);
+            .xVelocity(94.10517366664617)
+            .yVelocity(78.43185737189346);
 
     public static PinpointConstants localizerConstants = new PinpointConstants()
-            .forwardPodY(-4.72)
-            .strafePodX(-4.19)
+            .forwardPodY(0.25)
+            .strafePodX(-7.11)
             .distanceUnit(DistanceUnit.INCH)
             .hardwareMapName("pinpoint")
             .encoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_SWINGARM_POD)
             .forwardEncoderDirection(GoBildaPinpointDriver.EncoderDirection.FORWARD)
-            .strafeEncoderDirection(GoBildaPinpointDriver.EncoderDirection.FORWARD);
+            .strafeEncoderDirection(GoBildaPinpointDriver.EncoderDirection.REVERSED);
 
     public static PathConstraints pathConstraints = new PathConstraints(0.99, 100, 1, 1);
 
